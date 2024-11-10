@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="..\asset\style.css">
+    <style>
+          
+          body {
+    background-color: rgb(210, 210, 210);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+     
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #999;
+        }
+
+        fieldset {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #a8c6df;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-size: 14px;
+            padding: 0 5px;
+            color: #666;
+        }
+
+        .profile-color {
+            width: 100%;
+            height: 40px;
+            background-color: #673AB7;
+            border: 1px solid #a8c6df;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .radio-option {
+            margin-bottom: 8px;
+        }
+
+        .radio-option label {
+            display: inline;
+            margin-left: 5px;
+            color: #333;
+        }
+
+        .radio-option input[type="radio"],
+        .radio-option input[type="checkbox"] {
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        .about-yourself {
+            width: 100%;
+            height: 80px;
+            resize: none;
+        }
+
+        select[multiple] {
+            height: auto;
+            min-height: 100px;
+        }
+
+        select option {
+            padding: 5px;
+        }
+
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signup-btn {
+            padding: 8px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .reset-btn {
+            padding: 8px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 3px rgba(74, 144, 226, 0.3);
+        }
+
+        /* Custom file input styling */
+        input[type="file"] {
+            border: 1px solid #a8c6df;
+            padding: 6px;
+            background-color: #fff;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            padding: 4px 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #a8c6df;
+            border-radius: 3px;
+            color: #666;
+            margin-right: 10px;
+        }
+
+        /* Date input styling */
+        input[type="date"] {
+            color: #666;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0.7;
+        }
+
+        /* Custom select styling */
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 16px;
+            padding-right: 30px;
+        }
+
+        select[multiple] {
+            background-image: none;
+            padding-right: 8px;
+        }
+ /*nnnnnnnnnnnnnewwwwwwwwwwwwwwwwwwwww*/
+ /* Make the buttons wider */
+.signup-btn,
+.reset-btn {
+    width: 100%;  /* Make the button take up the full width */
+    padding: 15px;  /* Adjust padding for a larger button */
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Increase the label width and spacing */
+.form-group label {
+    display: block;
+    margin-bottom: 10px;  /* Increase margin for larger spacing between labels */
+    font-size: 16px;  /* Optional: Increase label font size */
+    color: #333;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;  /* Increase container padding for more space */
+}
+
+/* Increase width of form input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+textarea,
+select,
+input[type="file"] {
+    width: 950px;  /* Make the input fields take up full width */
+    padding: 12px;  /* Increase input field padding for more space */
+    border: 1px solid #a8c6df;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <form>
+            <div class="up">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+
+            <div class="up">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Full Name">
+            </div>
+
+            <div class="up">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="name@example.com">
+            </div>
+
+            <div class="up">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" placeholder="(0954) 000 000 00 00">
+            </div>
+
+            <div class="up">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+
+            <div class="up">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="up">
+                <label>Profile Color</label>
+                <div class="profile-color"></div>
+            </div>
+
+            <fieldset>
+                <legend>Marital Status</legend>
+                <div class="radio-option">
+                    <input type="radio" id="single" name="marital-status">
+                    <label for="single">Single</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="married" name="marital-status">
+                    <label for="married">Married</label>
+                </div>
+                <div class="radio-option">
+                    <input type="checkbox" id="private">
+                    <label for="private">It is private</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="children">No. of Children</label>
+                <select id="children">
+                    <option>None</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="degrees">Choose your Degrees</label>
+                <select id="degrees" multiple>
+                    <option>Diploma</option>
+                    <option>Bachelor of Science (BSc)</option>
+                    <option>Bachelor of Arts (BA)</option>
+                    <option>High School</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+                <textarea id="about" class="about-yourself" placeholder="About yourself"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cv">Upload your CV</label>
+                <input type="file" id="cv">
+            </div>
+
+            <fieldset>
+                <legend>Gender</legend>
+                <div class="radio-option">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Agreements</legend>
+                <div class="radio-option">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I have read all the terms</label>
+                </div>
+                <div class="radio-option">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">Yes, I'm agree</label>
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <button type="submit" class="signup-btn">Signup</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

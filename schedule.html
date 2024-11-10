@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="..\asset\style.css">
+    <style>
+            
+          body {
+    background-color: rgb(210, 210, 210);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+
+}
+        .schedule-container {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1000px;
+        }
+        
+        .schedule-title {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #084e60;
+        }
+        
+        th, td {
+            border: 1px solid #084e60;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f1f2f3;
+            color: #084e60;
+        }
+        
+        .day-column {
+            color: #084e60;
+            font-weight: bold;
+        }
+        
+        .time-cell {
+            white-space: nowrap;
+        }
+        
+        .main-header {
+            background-color: #f1f2f3;
+            color: #084e60;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="schedule-container">
+        <h1 class="schedule-title">Seminar Schedule</h1>
+   <table style="margin-left: 80px;">
+            <tr>
+                <th rowspan="2">Day</th>
+                <th colspan="3" class="main-header">Morning Sessions</th>
+                <th colspan="3" class="main-header">Evening Sessions</th>
+            </tr>
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+                <th>Topic</th>
+                <th>Begin</th>
+                <th>End</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td class="day-column">Monday</td>
+                <td class="time-cell">8:00 AM</td>
+                <td class="time-cell">11:00 AM</td>
+                <td>Introduction to XML<br>CSS Language</td>
+                <td class="time-cell">01:30 PM</td>
+                <td class="time-cell">03:00 PM</td>
+                <td>HTM Language</td>
+            </tr>
+            <tr>
+                <td class="day-column" rowspan="2">Tuesday</td>
+                <td class="time-cell">08:00 AM</td>
+                <td class="time-cell">10:00 AM</td>
+                <td rowspan="2">Introduction to Javascript</td>
+                <td class="time-cell">02:00 PM</td>
+                <td class="time-cell">03:30 PM</td>
+                <td>The DOM</td>
+            </tr>
+            <tr>
+                <td class="time-cell">10:30 AM</td>
+                <td class="time-cell">12:00 PM</td>
+                <td class="time-cell">04:00 PM</td>
+                <td class="time-cell">06:00 PM</td>
+                <td>Advanced Javascript</td>
+            </tr>
+            <tr>
+                <td class="day-column">Wednesday</td>
+                <td class="time-cell">9:00 AM</td>
+                <td class="time-cell">11:00 AM</td>
+                <td>Web Design and Bootstrap</td>
+                <td class="time-cell">01:00 PM</td>
+                <td class="time-cell">03:00 PM</td>
+                <td>Introduction to Nodejs</td>
+            </tr>
+        </table>
+    </div>
+</body>

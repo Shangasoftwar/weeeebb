@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\asset\style.css">
+    <title>WebDesign 2021 Assignment</title>
+     
+    <style>
+        
+          body {
+    background-color: rgb(210, 210, 210);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+
+}
+ 
+header {
+    background-color: #bfc3c4;
+    color: black;
+    text-align: left;
+    padding: 20px 30px 20px;
+    border-top: 10px solid orange;
+   
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    margin-left: -80px;
+    padding-left: 50px;
+   
+}
+
+header h1::after,
+header h1::before{
+    content: ' ';
+    position: relative;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 4px double #428dc0;
+    box-shadow: 0px 0px 10px 8px inset #5d96bc;
+    border-radius: 6px;
+    margin: 5px 80px ;
+}
+header h1:after{
+    position: absolute;
+    left: 0;
+   transform: rotateZ(45deg);
+}
+
+#sticky{
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Sticky Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #16697a;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            color: white;
+        }
+
+    
+        .nav-links {
+            display: flex;
+            list-style: none;
+   
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Hero Section */
+        .hero-slider {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Quick Links */
+        .quick-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+            gap: 1rem;
+        }
+
+        .quick-link {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            border: 2px solid #16697a;
+            text-decoration: none;
+            color: #16697a;
+        }
+
+        /* Recent Articles */
+        .recent-articles {
+            padding: 2rem;
+        }
+
+        .article {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .article img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #16697a;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+               border-top: 10px solid orange;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .quick-links {
+                flex-direction: column;
+            }
+            
+            .article {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+       
+    </style>
+</head>
+
+    <header>
+ 
+      <div><h1>WebDesign 2024 Assignment</h1>
+    </div>
+    </header>
+    <nav id="sticky"class="navbar">
+      <ul class="nav-links">
+        <li><a href="home.html" data-page="home.html">Home</a></li>
+        <li><a href="blog.html" data-page="blog.html">Blog</a></li>
+        <li><a href="schedule.html" data-page="schedule.html">Schedule</a></li>
+        <li><a>Layout Design</a>
+        <div class="dropdown-content">
+                    <a href="layout/float.html">Float Layout with Side nav</a>
+                    <a href="layout/flexbox.html">Flexbox Layout with Side nav</a>
+                    <a href="layout/grid.html">Blog Grid View</a>
+                </div></li>
+                <li><a href="signup.html" data-page="signup.html">Signup</a></li>
+               <li><a href="signin.html" data-page="signin.html">Signin</a></li>
+        
+      </ul>
+    </nav>
+
+   <body>
+    <div class="home-content">
+    
+     <div class="carousel">
+        <!-- Slide content -->
+        <div class="slides">
+            <div class="slide">
+                <img src="../img/homefirst.jpg" alt="img1">
+            </div>
+            <div class="slide">
+                <img src="../img/homeSecond.jpg" alt="img2">
+            </div>
+            <div class="slide">
+                <img src="../img/homethird.jpg" alt="img3">
+            </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+        <!-- Navigation dots -->
+        <div class="nav-buttons">
+            <span class="nav-dot" onclick="currentSlide(0)"></span>
+            <span class="nav-dot" onclick="currentSlide(1)"></span>
+            <span class="nav-dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="blog.html"data-page="blog.html"><button class="button">Blogs</button></a>
+        <a href="schedule.html"data-page="schedule.html"><button class="button">Seminar Schedule</button></a>
+        <a href="signup.html"data-page="signup.html"><button class="button">Signup</button></a>
+        <a href="signin.html"data-page="signin.html"><button class="button">Signin</button></a>
+    </div>
+
+    <div class="recent-articles">
+        <a href="#" class="recent-title">Recent Articles</a>
+
+        <div class="article">
+            <img src="img/fourthhome.jpg" alt="Mountain scenery">
+            <div class="article-content">
+                <h3>Topic 1 Lorem ipsum dolor sit amet</h3>
+                <p class="author">By <a href="#">Himdad Hasan</a> on Monday, 30/11/2020 12:00 PM</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fuga nam reiciendis commodi aperiam possimus laboriosam, molestiae nihil eaque itaque neque distinctio, minima delectus libero ipsum! Minima, aeque sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                <h3>Topic 2 Quo, excepturi incidunt</h3>
+                <p class="author">By <a href="#">Ari Abdullah</a> on Wednesday, 02/12/2020 01:00 PM</p>
+                <p>Quo, excepturi incidunt. Perferendis accusamus maiores enim numquam illo obcaecati, repellat animi velit quisquam voluptatem. Totam consequuntur soluta, libero quasi, cumque asperiores similique veritatis at earum autem corrupti, repudiandae rerum!</p>
+            </div>
+            <img src="../img/fifthjpg.jpg" alt="Sky view">
+        </div>
+    </div>
+
+    </div>
+</body>
+ 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Terms and Quick Links</h3>
+                <ul>
+                    <li><a href="#terms">Terms of usage</a></li>
+                    <li><a href="#link1">Link 1</a></li>
+                    <li><a href="#link2">Link 2</a></li>
+                    <li><a href="#link3">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Address and Contact</h3>
+                <p>City, Governorate, Country</p>
+                <p>Phone: 0964 000 000 0000</p>
+                <p>Email: example@domain.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script> 
+    document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const contentContainer = document.querySelector(".home-content");
+
+    // Store the initial home page content
+    const pageCache = {
+        "home.html": contentContainer.innerHTML
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const page = event.target.getAttribute("data-page");
+
+            if (page === "home.html") {
+                // Restore the home page content
+                contentContainer.innerHTML = pageCache["home.html"];
+                window.scrollTo(0, 0);
+            } else {
+                // Load the requested page content if not cached
+                if (!pageCache[page]) {
+                    fetch(page)
+                        .then(response => {
+                            if (!response.ok) throw new Error("Network response was not ok");
+                            return response.text();
+                        })
+                        .then(content => {
+                            pageCache[page] = content; // Cache the page content
+                            contentContainer.innerHTML = content;
+                            window.scrollTo(0, 0);
+                        })
+                        .catch(error => console.error("Error fetching content:", error));
+                } else {
+                    // Load from cache if already fetched
+                    contentContainer.innerHTML = pageCache[page];
+                    window.scrollTo(0, 0);
+                }
+            }
+        });
+    });
+});
+
+ 
+</script>
+        <script src="../asset/script.js"></script>
+</body>
+</html>
+
+
